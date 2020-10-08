@@ -1,0 +1,27 @@
+{
+    "name": "loris/wordpress-custom",
+    "authors": [
+        {
+            "name": "Loris",
+            "email": "loris@oclock.io"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^5.3",
+        "wpackagist-theme/twentytwenty": "1.0",
+        "wpackagist-plugin/akismet": "^4.1"
+    },
+    "extra" : {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/themes/{$name}": ["type:wordpress-theme"],
+            "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    }
+}
